@@ -3,8 +3,10 @@
 #include "Camera.h"
 #include "BMPSensor.h"
 #include "DataClient.h"
+#include "Credentials.h"
 
-DataClient client("SSID Here", "******", "nathang.dev", 00000, "Nathan", false);
+// Update these credentials in Credentials.h
+DataClient client(SSID, PASSWORD, HOST_NAME, PORT, DEVICE_NAME, false);
 Camera camera;
 BMPSensor bmp;
 
