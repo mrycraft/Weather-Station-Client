@@ -10,6 +10,12 @@ DataClient client(SSID, PASSWORD, HOST_NAME, PORT, DEVICE_NAME, false);
 Camera camera;
 BMPSensor bmp;
 
+unsigned long imageInterval = 9000;
+unsigned long bmpInterval = 10000;
+
+unsigned long lastImageTime = 0;
+unsigned long lastBmpTime = 0;
+
 void setup()
 {
     Serial.begin(115200);
@@ -22,13 +28,6 @@ void setup()
     lastImageTime = millis();
     lastBmpTime = millis();
 }
-
-unsigned long imageInterval = 9000;
-unsigned long bmpInterval = 10000;
-
-unsigned long lastImageTime = 0;
-unsigned long lastBmpTime = 0;
-
 
 void loop()
 {
