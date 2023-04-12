@@ -10,7 +10,7 @@ DataClient client(SSID, PASSWORD, HOST_NAME, PORT, DEVICE_NAME, false);
 Camera camera;
 BMPSensor bmp;
 
-unsigned long imageInterval = 9000;
+unsigned long imageInterval = 30000;
 unsigned long bmpInterval = 10000;
 
 unsigned long lastImageTime = 0;
