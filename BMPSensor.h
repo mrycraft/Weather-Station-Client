@@ -47,12 +47,12 @@ public:
         bmp = Adafruit_BMP085();
 
         unsigned status;
-        status = bmp.begin(&wire);
+        status = bmp.begin(BMP085_ULTRAHIGHRES, &wire);
         while (!status)
         {
             Serial.println(F("Could not find a valid BMP085 sensor"));
             delay(1000);
-            status = bmp.begin(&wire);
+            status = bmp.begin(BMP085_ULTRAHIGHRES, &wire);
         }
 
         Serial.println(F("BMP085 sensor found!"));
